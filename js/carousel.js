@@ -3,6 +3,13 @@ showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  changeImg(slideIndex)
+}
+
+function changeImg(number) {
+    let img = document.getElementById('back-img')
+    img.style.backgroundImage = "url('../assets/img"+ number +".jpg')"
+
 }
 
 function showSlides(n) {
@@ -18,5 +25,4 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
