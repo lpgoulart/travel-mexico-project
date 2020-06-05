@@ -40,7 +40,7 @@ body, html {
         height: 60px;
         position: fixed;
         width: 70%;
-        background-color: rgba(0, 0, 0, .7);
+        background-color: rgba(0, 0, 0, .8);
         color: rgba(255, 255, 255, .75);
 
 
@@ -54,11 +54,15 @@ body, html {
             float: left;
             width: 60px;
             height: 60px;
+            padding-left: 20px;
+            span {
+                font-size: 20px;
+            }
         }
         .nav {
             height: 60px;
             justify-content: space-between;
-            padding: 0 30px;
+            padding: 0 30px 0 15px;
 
             ul {
                 display: flex;
@@ -83,15 +87,62 @@ body, html {
         .up-content {
             background-color: red;
             height: 50vh;
-            background-image: url('../assets/side-image.jpg');
+            background-image: url('../assets/ring.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         .down-content {
-            background-color: paleturquoise;
+            background-color: #009ab4;
+            color: white;
             height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .info-card {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                width: calc(100% - 100px);
+                height: calc(50vh - 100px);
+                font-size: 20px;
+
+                .date {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .line-between::after {
+                        content: '⎯⎯';
+                        padding: 0 6px 0 8px
+                    }
+                }
+                .about {
+                    h2 {
+                        font-size: 3rem;
+                        margin-top: 0;
+                    }
+                    h3 {
+                        margin: 8px 0;
+                        font-weight: 300;
+                    }
+                    
+                }
+                .more {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .arrow {
+                        font-size: 25px;
+                        span {
+                            padding: 0 7px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -106,10 +157,10 @@ body, html {
     .jumbo-content {
         min-height: calc(100vh - 60px);
         background-image: linear-gradient(
-            rgba(0, 0, 0, .7) 10%, 
-            rgba(0, 0, 0, .5) 20%, 
-            rgba(0, 0, 0, .5) 80%,
-            rgba(0, 0, 0, .7) 90%);
+            rgba(0, 0, 0, .8) 10%, 
+            rgba(0, 0, 0, .7) 20%, 
+            rgba(0, 0, 0, .7) 80%,
+            rgba(0, 0, 0, .8) 90%);
         width: 100%;
 
         display: flex;
